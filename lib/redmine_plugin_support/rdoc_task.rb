@@ -1,11 +1,11 @@
-require 'rake/rdoctask'
+require 'rdoc/task'
 
 module RedminePluginSupport
   class RDocTask < GeneralTask
     def define
 
       desc "Generate documentation for XXX"
-      Rake::RDocTask.new(:doc) do |rdoc|
+      RDoc::Task.new(:doc) do |rdoc|
         rdoc.rdoc_dir = 'doc'
         rdoc.title    = Base.instance.project_name
         rdoc.options << '--line-numbers' << '--inline-source'

@@ -1,36 +1,6 @@
 require 'rubygems'
 require 'rake'
 
-begin
-  require 'jeweler'
-  Jeweler::Tasks.new do |gem|
-    gem.name = "redmine_plugin_support"
-    gem.summary = %Q{Libraries to automate the creation and management of Redmine plugins}
-    gem.description = %Q{This libarary is a collection of rake tasks and other scripts that will make Redmine plugin development easier.}
-    gem.email = "edavis@littlestreamsoftware.com"
-    gem.homepage = "http://github.com/edavis10/redmine_plugin_support"
-    gem.authors = ["Eric Davis"]
-    gem.add_development_dependency "thoughtbot-shoulda"
-    gem.rubyforge_project = "redmine_plugin_support" # TODO
-    gem.files =  FileList[
-                          "[A-Z]*",
-                          "init.rb",
-                          "rails/init.rb",
-                          "{bin,generators,lib,test,app,assets,config,lang}/**/*",
-                          'lib/jeweler/templates/.gitignore'
-                         ]
-
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
-  end
-  Jeweler::GemcutterTasks.new
-  Jeweler::RubyforgeTasks.new do |rubyforge|
-    rubyforge.doc_task = "rdoc"
-  end
-
-rescue LoadError
-  puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"
-end
-
 require 'rake/testtask'
 Rake::TestTask.new(:test) do |test|
   test.libs << 'lib' << 'test'
@@ -51,7 +21,7 @@ rescue LoadError
   end
 end
 
-task :test => :check_dependencies
+#task :test => :check_dependencies
 
 begin
   require 'reek/rake_task'
@@ -80,8 +50,8 @@ end
 
 task :default => :test
 
-require 'rake/rdoctask'
-Rake::RDocTask.new do |rdoc|
+require 'rdoc/task'
+RDoc::Task.new do |rdoc|
   if File.exist?('VERSION')
     version = File.read('VERSION')
   else
