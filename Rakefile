@@ -1,5 +1,10 @@
 require 'rubygems'
 require 'rake'
+require 'rails'
+
+class Rails::Application
+  include Rake::DSL if defined?(Rake::DSL)
+end
 
 require 'rake/testtask'
 Rake::TestTask.new(:test) do |test|
