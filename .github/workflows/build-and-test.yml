@@ -25,4 +25,4 @@ jobs:
         run: |
           gem install bundler
           bundle update
-          rake
+          rake rdoc
