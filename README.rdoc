@@ -40,3 +40,4 @@ Bug reports and feature requests are welcome at https://projects.littlestreamsof
 == Copyright
 
 Copyright (c) 2009 Eric Davis. See LICENSE for details.
+Copyright (c) 2021 Pangaea Information Technologies. See LICENSE for details.

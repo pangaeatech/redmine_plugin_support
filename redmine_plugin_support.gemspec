@@ -5,10 +5,10 @@
 
 Gem::Specification.new do |s|
   s.name = %q{redmine_plugin_support}
-  s.version = "0.0.4"
+  s.version = "0.0.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Eric Davis"]
+  s.authors = ["Eric Davis", "Pangaea Information Technologies"]
   s.date = %q{2010-05-10}
   s.description = %q{This libarary is a collection of rake tasks and other scripts that will make Redmine plugin development easier.}
   s.email = %q{edavis@littlestreamsoftware.com}
