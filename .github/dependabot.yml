@@ -8,3 +8,10 @@ updates:
     commit-message:
       prefix: "[Development]"
     open-pull-requests-limit: 10
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "11:00"
+    commit-message:
+      prefix: "[Development]"
